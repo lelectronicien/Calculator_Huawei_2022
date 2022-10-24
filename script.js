@@ -1,34 +1,34 @@
 //let's display the values of our operands when we click on the buttons.
-const display = document.querySelector("#display");
-const buttons = document.querySelectorAll("button");
+const DISPLAY = document.querySelector("#display");
+const BUTTONS = document.querySelectorAll("button");
 
-buttons.forEach(button => 
+BUTTONS.forEach(button => 
     {
         button.onclick = () => 
         {
             if (button.id == "clear") {
-                display.innerText = "";
+                DISPLAY.innerText = "";
             }
 
             else if (button.id == "backspace") {
-                let string = display.innerText.toString();
-                display.innerText = string.substr(0, string.length - 1);
+                let string = DISPLAY.innerText.toString();
+                DISPLAY.innerText = string.substr(0, string.length - 1);
             }
 
-            else if (display.innerText != "" && button.id == "equal") {
-                display.innerText = eval(display.innerText);
+            else if (DISPLAY.innerText != "" && button.id == "equal") {
+                DISPLAY.innerText = eval(DISPLAY.innerText);
             }
 
-            else if (display.innerText == "" && button.id == "equal") {
-                display.innerText = "No digit, no result!";
+            else if (DISPLAY.innerText == "" && button.id == "equal") {
+                DISPLAY.innerText = "No digit, no result!";
             }
 
             else if (button.id == "%"){
-                display.innerText = parseFloat(display.innerText)/100;
+                DISPLAY.innerText = parseFloat(DISPLAY.innerText)/100;
             }
             
             else {
-                display.innerText += button.id;
+                DISPLAY.innerText += button.id;
             }
         };
     });
