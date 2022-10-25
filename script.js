@@ -34,3 +34,7 @@ BUTTONS.forEach(button =>
             }
         };
     });
+
+//let's create the elipse display
+const SCIENTIFIC = document.querySelector("ul");
+

@@ -27,9 +27,20 @@ body {
 
 }
 
+.mode{
+ float: right;
+ justify-content: flex;
+}
 
 
+.buttons{
+background-color:white;
+margin: -9px;
+padding-top: 5px;
+border-radius: 10px;
+box-shadow: 0px 0px 0.7px 0.7px rgb(214, 213, 213);
 
+}
 
 #display {
     margin: 0 10px;
@@ -73,7 +84,7 @@ button#equal {
 
 
 .calculator {
-    background-color: #fff;
+    background-color:rgb(240, 237, 237);
 }
 
 .calculator #display {
